@@ -12,13 +12,16 @@ with open("README.rst", "rb") as f:
 setup(
     name='awsecsbot',
     version=version,
-    description='Bot for managing Amazon Web Service Elastic Container Service deployments.',
+    description='Bot for managing and deploying docker containers to various sevice providers.',
     long_description=long_desctiption,
     author='Seth Denner',
     author_email='seth@knotis.com',
-    url='https://github.com/Knotis/awsecsbot',
-    packages=['awsecsbot'],
+    url='https://github.com/Knotis/containerbot',
+    packages=['containerbot'],
     entry_points = {
-        'console_scripts': ['awsecsbot = awsecsbot.awsecsbot:run']
-    }
+        'console_scripts': ['containerbot = containerbot.containerbot:run']
+    },
+    install_requires=[
+        'Click'
+    ]
 )    
